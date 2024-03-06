@@ -73,6 +73,8 @@ dependencies {
   implementation(libs.glide)
   //ksp(libs.glide.compiler)
 
+  implementation(project(":parallaxview"))
+
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)

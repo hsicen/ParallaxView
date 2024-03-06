@@ -18,10 +18,9 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       ParallaxViewTheme {
-        // A surface container using the 'background' color from the theme
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
           Greeting("Android", modifier = Modifier.clickable {
-            SampleList1.start(this)
+            SampleList2.start(this)
           })
         }
       }
