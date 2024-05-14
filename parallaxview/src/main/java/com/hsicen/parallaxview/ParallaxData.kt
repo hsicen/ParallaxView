@@ -1,0 +1,1 @@
+package com.hsicen.parallaxviewimport androidx.annotation.Keepimport java.io.Serializable@Keepopen class ParallaxData(val img: String) : Serializable
