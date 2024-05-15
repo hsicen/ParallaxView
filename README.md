@@ -25,4 +25,4 @@ lifecycle.removeObserver(ParallaxView)
 ```
 
 ### 效果
-["视频效果"](./screenshot/Screen_recording_20240515_161829.mp4)
+![](./screenshot/Screen_recording_20240515_161829.gif)
