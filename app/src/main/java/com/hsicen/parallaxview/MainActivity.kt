@@ -18,59 +18,68 @@ import androidx.compose.ui.unit.dp
 import com.hsicen.parallaxview.ui.theme.ParallaxViewTheme
 
 class MainActivity : ComponentActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContent {
-      ParallaxViewTheme {
-        Surface(
-          modifier = Modifier.fillMaxSize(),
-          color = MaterialTheme.colorScheme.background
-        ) {
-          MainContent()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ParallaxViewTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    MainContent()
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-  Text(
-    text = "Hello $name!",
-    modifier = modifier
-  )
+    Text(
+        text = "Hello $name!",
+        modifier = modifier
+    )
 }
 
 @Preview(showBackground = true)
 @Composable
 fun MainContent() {
-  val current = LocalContext.current
+    val current = LocalContext.current
 
-  Column {
-    OutlinedButton(onClick = {
-      SampleList2.start(current as ComponentActivity)
-    }, modifier = Modifier.padding(16.dp)) {
-      Text(
-        text = "ParallaxView",
-        modifier = Modifier.padding(16.dp)
-      )
-    }
+    Column {
+        OutlinedButton(onClick = {
+            SampleList2.start(current as ComponentActivity)
+        }, modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "ParallaxView Vertical",
+                modifier = Modifier.padding(16.dp)
+            )
+        }
 
-    OutlinedButton(onClick = {
-      SampleList1.start(current as ComponentActivity)
-    }, modifier = Modifier.padding(16.dp)) {
-      Text(
-        text = "ImmersiveList",
-        modifier = Modifier.padding(16.dp)
-      )
+        OutlinedButton(onClick = {
+            SampleList3.start(current as ComponentActivity)
+        }, modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "ParallaxView Horizontal",
+                modifier = Modifier.padding(16.dp)
+            )
+        }
+
+        OutlinedButton(onClick = {
+            SampleList1.start(current as ComponentActivity)
+        }, modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "ImmersiveList",
+                modifier = Modifier.padding(16.dp)
+            )
+        }
     }
-  }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-  ParallaxViewTheme {
-    Greeting("Android")
-  }
+    ParallaxViewTheme {
+        Greeting("Android")
+    }
 }

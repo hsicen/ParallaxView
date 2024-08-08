@@ -1,1 +1,1 @@
-package com.hsicen.parallaxviewimport android.view.Viewimport androidx.recyclerview.widget.RecyclerViewopen class ParallaxViewHolder(val root: View) : RecyclerView.ViewHolder(root)
+package com.hsicen.parallaxviewimport android.view.Viewimport androidx.recyclerview.widget.RecyclerViewopen class ParallaxViewHolder(val root: View) :    RecyclerView.ViewHolder(root)
